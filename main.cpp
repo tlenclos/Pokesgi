@@ -17,8 +17,15 @@
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
 
-// Here is a small helper for you ! Have a look.
+#ifdef __APPLE__
+// Helper to get resource Path in OSX app
 #include "ResourcePath.hpp"
+#endif
+
+#ifdef _WIN32
+// Windows (x64 and x86)
+#include "ResourcePathDefault.h"
+#endif
 
 // Map includes
 #include "NLTmxMap.h"

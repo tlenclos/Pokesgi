@@ -12,37 +12,40 @@ using namespace std;
 
 //Constructor
 Pokemon::Pokemon() {
-    pv = 100;
+    hp = 100;
     listAttack = * new vector<Attack>(0);
 }
 
 //Getters
 string Pokemon::getName() const { return name; }
 string Pokemon::getType() const { return type; }
-int Pokemon::getPV() const { return pv; }
+int Pokemon::getHP() const { return hp; }
 int Pokemon::getLevel() const { return lvl; }
-int Pokemon::getAtt() const { return att; }
+int Pokemon::getAtk() const { return atk; }
 int Pokemon::getDef() const { return def; }
-int Pokemon::getVit() const { return vit; }
+int Pokemon::getSpd() const { return spd; }
 
 //Setters
 void Pokemon::setName(string newName) { name = newName; }
 void Pokemon::setType(string newType) { type = newType; }
-void Pokemon::setPV(int newPV) { pv = newPV; }
+void Pokemon::setHP(int newHP) { hp = newHP; }
 void Pokemon::setLevel(int newLvl) { lvl = newLvl; }
-void Pokemon::setAtt(int newAtt) { att = newAtt; }
+void Pokemon::setAtk(int newAtk) { atk = newAtk; }
 void Pokemon::setDef(int newDef) { def = newDef; }
-void Pokemon::setVit(int newVit) { vit = newVit; }
+void Pokemon::setSpd(int newSpd) { spd = newSpd; }
 
 //Methodes
 void Pokemon::addDamage(int nbDamage){
-    pv -= nbDamage;
-    if (pv < 0)
-        pv = 0;
+    hp -= nbDamage;
+    if (hp < 0)
+        hp = 0;
 }
 
-void Pokemon::attack(Pokemon &pkmTarget){
-    //pkmTarget.addDamage();
+void Pokemon::launchAttack(Pokemon &pkmTarget, Attack &attack){
+    if (attack.getPP() > 0) {
+        pkmTarget.addDamage(attack.getDamage());
+        attack--;
+    }
 }
 
 //Destructor

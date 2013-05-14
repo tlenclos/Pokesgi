@@ -26,8 +26,18 @@ void Attack::setPP(int newPP) { pp = newPP; }
 void Attack::setDamage(int newDamage) { damage = newDamage; }
 
 //Methodes
-void launchAttack() {
-    
+
+
+//Operator
+Attack& Attack::operator--() {
+    pp--;
+    return *this;
+}
+
+Attack Attack::operator--(const int i) {
+    Attack atk = *this;
+    pp--;
+    return atk;
 }
 
 //Destructor

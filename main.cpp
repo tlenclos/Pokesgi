@@ -27,8 +27,9 @@
 #include "ResourcePathDefault.h"
 #endif
 
-// Map includes
+// App includes
 #include "NLTmxMap.h"
+#include "Hero.h"
 
 using namespace std;
 
@@ -61,6 +62,12 @@ static void* loadFile( const char * filename, bool appendNull ) {
 
 int main(int, char const**)
 {
+    // Test Hero
+    Hero ash("Ash");
+    sf::Vector2u initPosition(2, 5);
+    ash.setPosition(initPosition);
+    cout << ash.getName() + " est à la position " << ash.getPosition().x << "/" << ash.getPosition().y << endl;
+    
     // Create the main window
     sf::RenderWindow window(sf::VideoMode(512, 512), "Pokesgi");
     

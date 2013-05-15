@@ -178,6 +178,8 @@ int main(int, char const**)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
             }
+            
+            ash.listenInputs();
         }
 
         // Clear screen

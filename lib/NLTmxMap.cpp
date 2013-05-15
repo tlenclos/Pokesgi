@@ -29,8 +29,6 @@ NLTmxMap* NLLoadTmxMap( char *xml )
         tileset->tileHeight = atoi( tilesetnode->first_attribute( "tileheight" )->value() );
         tileset->filename = tilesetnode->first_node( "image" )->first_attribute( "source" )->value();
         
-        cout << "Tileset " << tileset->name << " filename " << tileset->filename << endl;
-        
         map->tilesets.push_back( tileset );
         
         tilesetnode = tilesetnode->next_sibling( "tileset" );
@@ -87,8 +85,6 @@ NLTmxMap* NLLoadTmxMap( char *xml )
         } else {
             group->visible = true;
         }
-        
-        //cout << "group " << group->name << endl;
         
         xml_node<> *objectnode = objectgroupnode->first_node( "object" );
         

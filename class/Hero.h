@@ -19,17 +19,20 @@ class Hero : public Trainer
 private:
     // Variables
     sf::Sprite sprite;
+    sf::Texture texture;
     
 public:
     Hero(); // Constructeur
-    Hero(string name, sf::Texture texture);
+    Hero(string name, sf::Texture &texture);
     ~Hero(); // Destructeur
     
     // Getters
     sf::Sprite getSprite() const;
+    sf::Texture getTexture() const;
     
     // Setters
     void setSprite(sf::Sprite sprite);
+    void setTexture(sf::Texture texture);
     
     // Methodes
     void listenInputs();

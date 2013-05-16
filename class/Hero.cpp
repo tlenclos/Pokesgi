@@ -13,15 +13,16 @@ using namespace std;
 
 Hero::Hero() {}
 
-Hero::Hero(string name, sf::Texture texture) : Hero::Hero() {
+Hero::Hero(string name, sf::Texture &texture) : Hero::Hero() {
     setName(name);
-    
-    int tileHeight = 100;
-    int tileWidth = 100;
+    setTexture(texture);
+   
+    int tileHeight = 25;
+    int tileWidth = 20;
     
     sf::Rect <int> rect;
-    rect.top = 3 * tileHeight;
-    rect.left = 3 * tileWidth;
+    rect.top = 0 * tileHeight;
+    rect.left = 0 * tileWidth;
     rect.height = tileHeight;
     rect.width = tileWidth;
     
@@ -37,10 +38,16 @@ Hero::Hero(string name, sf::Texture texture) : Hero::Hero() {
 sf::Sprite Hero::getSprite() const {
     return sprite;
 }
+sf::Texture Hero::getTexture() const {
+    return texture;
+}
 
 // Setters
 void Hero::setSprite(sf::Sprite newSprite) {
     sprite = newSprite;
+}
+void Hero::setTexture(sf::Texture newTexture) {
+    texture = newTexture;
 }
 
 // Add controls to move hero

@@ -10,6 +10,7 @@
 #define __Pokesgi__Hero__
 
 #include <iostream>
+#include <SFML/Graphics.hpp>
 
 #include "Trainer.h"
 
@@ -20,6 +21,9 @@ public:
     Hero(); // Constructeur
     Hero(string name);
     ~Hero(); // Destructeur
+    
+    // Methodes
+    void listenInputs();
 };
 
 #endif /* defined(__Pokesgi__Hero__) */

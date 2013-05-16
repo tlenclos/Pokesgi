@@ -124,7 +124,6 @@ int main(int, char const**)
         int y = 0;
         
         cout << layer->name << endl;
-        cout << "-----------" << endl;
         
         for(int i = 0; i < dataSize; i++) {
             int subRectToUse = layer->data[i] - firstgid;
@@ -179,6 +178,8 @@ int main(int, char const**)
             if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
                 window.close();
             }
+            
+            ash.listenInputs();
         }
 
         // Clear screen

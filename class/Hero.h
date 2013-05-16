@@ -14,13 +14,22 @@
 
 #include "Trainer.h"
 
-
 class Hero : public Trainer
 {
+private:
+    // Variables
+    sf::Sprite sprite;
+    
 public:
     Hero(); // Constructeur
-    Hero(string name);
+    Hero(string name, sf::Texture texture);
     ~Hero(); // Destructeur
+    
+    // Getters
+    sf::Sprite getSprite() const;
+    
+    // Setters
+    void setSprite(sf::Sprite sprite);
     
     // Methodes
     void listenInputs();

@@ -62,8 +62,22 @@ static void* loadFile( const char * filename, bool appendNull ) {
 
 int main(int, char const**)
 {
+    // Ressources
+    string resPathMap = resourcePath() + "map.tmx";
+    string resPathTileset = resourcePath() + "tileset-shinygold.png";
+    string resPathTilesetCharacters = resourcePath() + "spritesofpeople2.png";
+    
     // Test Hero
-    Hero ash("Ash");
+    sf::Image tilesetImageCharacters;
+    if (!tilesetImageCharacters.loadFromFile(resPathTilesetCharacters))
+    {
+        cout << "Failed to load characters tile sheet." << endl;
+        return false;
+    }
+    sf::Texture tilesetTextureCharacters;
+    tilesetTextureCharacters.loadFromImage(tilesetImageCharacters);
+    
+    Hero ash("Ash", tilesetTextureCharacters);
     sf::Vector2u initPosition(2, 5);
     ash.setPosition(initPosition);
     cout << ash.getName() + " est à la position " << ash.getPosition().x << "/" << ash.getPosition().y << endl;
@@ -72,8 +86,6 @@ int main(int, char const**)
     sf::RenderWindow window(sf::VideoMode(512, 512), "Pokesgi");
     
     // Map loader
-    string resPathMap = resourcePath() + "map.tmx";
-    string resPathTileset = resourcePath() + "tileset-shinygold.png";
     const char* resPathMapChar = const_cast<char*>(resPathMap.c_str());
 
     char * xml = (char*) loadFile(resPathMapChar, true );
@@ -199,6 +211,7 @@ int main(int, char const**)
                  */
             }
         }
+        window.draw(ash.getSprite());
 
         // Update the window
         window.display();

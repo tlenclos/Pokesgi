@@ -39,8 +39,11 @@ public:
     void setDamage(int newDamage);
     
     //Methodes
-    void launchAttack();
     
+    
+    //Operator
+    Attack& operator--();
+    Attack operator--(const int i);
     
 };
 

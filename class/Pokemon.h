@@ -20,7 +20,7 @@ class Pokemon{
     
 private:
     //Variables
-    int id, pv, lvl, att, def, vit;
+    int id, hp, lvl, atk, def, spd;
     string name, type;
     
 public:
@@ -33,24 +33,24 @@ public:
     //Getters
     string getName() const;
     string getType() const;
-    int getPV() const;
+    int getHP() const;
     int getLevel() const;
-    int getAtt() const;
+    int getAtk() const;
     int getDef() const;
-    int getVit() const;
+    int getSpd() const;
 
     //Setters
     void setName(string newName);
     void setType(string newType);
-    void setPV(int newPV);
+    void setHP(int newHP);
     void setLevel(int newLvl);
-    void setAtt(int newAtt);
+    void setAtk(int newAtk);
     void setDef(int newDef);
-    void setVit(int newVit);
+    void setSpd(int newSpd);
     
     //Methodes
     void addDamage(int nbDamage);
-    void attack(Pokemon &pkmTarget);
+    void launchAttack(Pokemon &pkmTarget, Attack &attack);
     
     
 };

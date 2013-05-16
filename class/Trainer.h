@@ -25,7 +25,8 @@ public:
     ~Trainer(); // Destructeur
     
     // Variables
-    std::vector<Pokemon> pokemons;
+    vector<Pokemon> pokemons;
+    //vector<Item> items;   TODO after
 };
 
 #endif /* defined(__Pokesgi__Trainer__) */

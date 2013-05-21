@@ -17,12 +17,12 @@ Hero::Hero(string name, sf::Texture &texture) : Hero::Hero() {
     setName(name);
     setTexture(texture);
    
-    int tileHeight = 25;
-    int tileWidth = 20;
+    int tileHeight = 24;
+    int tileWidth = 22;
     
     sf::Rect <int> rect;
-    rect.top = 0 * tileHeight;
-    rect.left = 0 * tileWidth;
+    rect.top = 588 + tileHeight;
+    rect.left = 78 + tileWidth;
     rect.height = tileHeight;
     rect.width = tileWidth;
     

@@ -65,7 +65,7 @@ int main(int, char const**)
     // Ressources
     string resPathMap = resourcePath() + "map.tmx";
     string resPathTileset = resourcePath() + "tileset-shinygold.png";
-    string resPathTilesetCharacters = resourcePath() + "spritesofpeople2.png";
+    string resPathTilesetCharacters = resourcePath() + "personen-dp.png";
     
     // Test Hero
     sf::Image tilesetImageCharacters;

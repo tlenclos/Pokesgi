@@ -18,9 +18,9 @@ class Hero : public Trainer
 {
 private:
     // Variables
+    sf::Rect <int> *rects;
     sf::Sprite sprite;
     sf::Texture texture;
-    
 public:
     Hero(); // Constructeur
     Hero(string name, sf::Texture &texture);

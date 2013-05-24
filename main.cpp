@@ -16,8 +16,10 @@
 #include <iostream>
 #include <SFML/Audio.hpp>
 #include <SFML/Graphics.hpp>
+#include "assert.h"
 
 // App includes
+#include "Settings.h"
 #include "SceneContainer.h"
 #include "GameScene.h"
 
@@ -25,13 +27,24 @@ using namespace std;
 
 
 int main(int, char const**)
-{    
+{
+    // Test settings
+	Settings settings(resourcePath() + "settings.dat");
+	int width, height;
+    string appTitle;
+	settings.Get("width", &width);
+	settings.Get("height", &height);
+    settings.Get("title", &appTitle);
+    assert(width > 0);
+    assert(height > 0);
+    assert(appTitle.length() > 0);
+    
     //Applications variables
     std::vector<SceneContainer*> scenes;
     int screen = 0;
     
     //Window creation
-    sf::RenderWindow app(sf::VideoMode(512, 512), "Pokesgi");
+    sf::RenderWindow app(sf::VideoMode(width, height), appTitle);
     
     //App icon
     sf::Image icon;

@@ -35,6 +35,7 @@ public:
     void setTexture(sf::Texture texture);
     
     // Methodes
+    void heroInit();
     void listenInputs();
 };
 

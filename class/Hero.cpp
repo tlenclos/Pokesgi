@@ -11,7 +11,7 @@
 
 using namespace std;
 
-Hero::Hero() {
+void Hero::heroInit() {
     // Rects position for the 4 character images (back, right, face, left)
     rects = new sf::Rect<int>[4];
     
@@ -48,7 +48,8 @@ Hero::Hero() {
     rects[3] = leftRect;
 }
 
-Hero::Hero(string name, sf::Texture &texture) : Hero::Hero() {
+Hero::Hero(string name, sf::Texture &texture) {
+    heroInit();
     setName(name);
     setTexture(texture);
 

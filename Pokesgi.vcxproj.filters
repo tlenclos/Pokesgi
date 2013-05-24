@@ -1,0 +1,112 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Fichiers sources">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Fichiers d%27en-tête">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Fichiers de ressources">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Attack.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Helper.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Hero.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Person.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Pokemon.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="class\Trainer.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="class\scenes\GameScene.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\NLTmxMap.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\ResourcePathDefault.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+    <ClCompile Include="lib\Settings.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="class\Attack.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Helper.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Hero.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Person.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Pokemon.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="class\SceneContainer.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Trainer.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="class\scenes\GameScene.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\NLTmxMap.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\ResourcePath.hpp">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\ResourcePathDefault.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\Settings.h">
+      <Filter>Fichiers sources</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\RapidXML\rapidxml.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\RapidXML\rapidxml_iterators.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\RapidXML\rapidxml_print.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="lib\RapidXML\rapidxml_utils.hpp">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="lib\ResourcePath.mm">
+      <Filter>Fichiers sources</Filter>
+    </None>
+    <None Include="lib\RapidXML\manual.html" />
+    <None Include="res\settings.dat" />
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="lib\RapidXML\license.txt" />
+  </ItemGroup>
+</Project>

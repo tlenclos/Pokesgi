@@ -25,22 +25,20 @@ using namespace std;
 
 
 int main(int, char const**)
-{
-    /*
-    // Set the Icon
-    sf::Image icon;
-    if (!icon.loadFromFile(resourcePath() + "images/icon.png")) {
-        return EXIT_FAILURE;
-    }
-    window.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
-    */
-    
+{    
     //Applications variables
     std::vector<SceneContainer*> scenes;
     int screen = 0;
     
     //Window creation
     sf::RenderWindow app(sf::VideoMode(512, 512), "Pokesgi");
+    
+    //App icon
+    sf::Image icon;
+    if (!icon.loadFromFile(resourcePath() + "icon.png")) {
+        return EXIT_FAILURE;
+    }
+    app.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
     
     //Screens preparations
     GameScene game;

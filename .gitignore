@@ -13,3 +13,9 @@
 *.a
 
 *.plist
+
+# Windows project
+Debug
+*.opensdf
+*.sdf
+*.sln

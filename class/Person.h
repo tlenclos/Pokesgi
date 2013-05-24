@@ -20,8 +20,10 @@ private:
     // Variables
     string name;
     sf::Vector2u position;
-    
 public:
+    static int tileHeight;
+    static int tileWidth;
+    
     Person(); // Constructeur
     Person(string name);
     ~Person(); // Destructeur

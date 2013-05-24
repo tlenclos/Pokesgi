@@ -27,3 +27,5 @@ void Person::setPosition(sf::Vector2u newPosition) { position = newPosition; }
 // Destructor
 Person::~Person() {	}
 
+int Person::tileHeight = 24;
+int Person::tileWidth = 22;

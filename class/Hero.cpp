@@ -15,9 +15,6 @@ Hero::Hero() {
     // Rects position for the 4 character images (back, right, face, left)
     rects = new sf::Rect<int>[4];
     
-    int tileHeight = 24;
-    int tileWidth = 22;
-    
     // Back image
     sf::Rect <int> backRect;
     backRect.top = 556 + tileHeight;

@@ -10,6 +10,7 @@
 #define __Pokesgi__GameScene__
 
 #include <iostream>
+#include "Common.h"
 #include "SceneContainer.h"
 
 class GameScene : public SceneContainer

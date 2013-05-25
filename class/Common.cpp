@@ -1,14 +1,25 @@
 //
-//  Helper.cpp
+//  Common.cpp
 //  Pokesgi
 //
-//  Created by Thibault Lenclos on 24/05/13.
+//  Created by Thibault Lenclos on 25/05/13.
 //  Copyright (c) 2013 Thibault Lenclos. All rights reserved.
 //
 
-#include "Helper.h"
+#include "Common.h"
 
-void* Helper::loadFile( const char * filename, bool appendNull ) {
+#ifdef __APPLE__
+// Helper to get resource Path in OSX app
+#include "ResourcePath.hpp"
+#endif
+
+#ifdef _WIN32
+// Windows (x64 and x86)
+#include "ResourcePathDefault.h"
+#endif
+
+
+void* Common::loadFile( const char * filename, bool appendNull ) {
     
     FILE* f = fopen( filename, "rb" );
     if ( !f ) {
@@ -29,3 +40,5 @@ void* Helper::loadFile( const char * filename, bool appendNull ) {
     
     return buffer;
 }
+
+Settings Common::settings(resourcePath() + "settings.dat");

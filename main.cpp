@@ -19,6 +19,7 @@
 #include "assert.h"
 
 // App includes
+#include "Common.h"
 #include "Settings.h"
 #include "SceneContainer.h"
 #include "GameScene.h"
@@ -29,12 +30,11 @@ using namespace std;
 int main(int, char const**)
 {
     // Test settings
-	Settings settings(resourcePath() + "settings.dat");
 	int width, height;
     string appTitle;
-	settings.Get("width", &width);
-	settings.Get("height", &height);
-    settings.Get("title", &appTitle);
+    Common::settings.Get("width", &width);
+	Common::settings.Get("height", &height);
+    Common::settings.Get("title", &appTitle);
     assert(width > 0);
     assert(height > 0);
     assert(appTitle.length() > 0);

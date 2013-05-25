@@ -21,9 +21,6 @@
     <ClCompile Include="class\Attack.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
-    <ClCompile Include="class\Helper.cpp">
-      <Filter>Fichiers sources</Filter>
-    </ClCompile>
     <ClCompile Include="class\Hero.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
@@ -48,12 +45,12 @@
     <ClCompile Include="lib\Settings.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="class\Common.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\Attack.h">
-      <Filter>Fichiers sources</Filter>
-    </ClInclude>
-    <ClInclude Include="class\Helper.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
     <ClInclude Include="class\Hero.h">
@@ -97,6 +94,9 @@
     </ClInclude>
     <ClInclude Include="lib\RapidXML\rapidxml_utils.hpp">
       <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
+    <ClInclude Include="class\Common.h">
+      <Filter>Fichiers sources</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

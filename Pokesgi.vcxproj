@@ -12,7 +12,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="class\Attack.cpp" />
-    <ClCompile Include="class\Helper.cpp" />
+    <ClCompile Include="class\Common.cpp" />
     <ClCompile Include="class\Hero.cpp" />
     <ClCompile Include="class\Person.cpp" />
     <ClCompile Include="class\Pokemon.cpp" />
@@ -25,7 +25,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\Attack.h" />
-    <ClInclude Include="class\Helper.h" />
+    <ClInclude Include="class\Common.h" />
     <ClInclude Include="class\Hero.h" />
     <ClInclude Include="class\Person.h" />
     <ClInclude Include="class\Pokemon.h" />

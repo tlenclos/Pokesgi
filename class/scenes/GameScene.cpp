@@ -45,7 +45,7 @@ int GameScene::Run(sf::RenderWindow &app) {
     
     // Map loader
     const char* resPathMapChar = const_cast<char*>(resPathMap.c_str());
-    char * xml = (char*) Helper::loadFile(resPathMapChar, true );
+    char * xml = (char*) Common::loadFile(resPathMapChar, true );
     NLTmxMap* map = NLLoadTmxMap( xml );
     
     

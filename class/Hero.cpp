@@ -17,32 +17,32 @@ void Hero::heroInit() {
     
     // Back image
     sf::Rect <int> backRect;
-    backRect.top = 556 + tileHeight;
-    backRect.left = -19 + tileWidth;
+    backRect.top = 580;
+    backRect.left = 4;
     backRect.height = tileHeight;
     backRect.width = tileWidth;
     rects[0] = backRect;
    
     // Right image
     sf::Rect <int> rightRect;
-    rightRect.top = 556 + tileHeight;
-    rightRect.left = 30 + tileWidth;
+    rightRect.top = 580;
+    rightRect.left = 52;
     rightRect.height = tileHeight;
     rightRect.width = tileWidth;
     rects[1] = rightRect;
     
     // Face image
     sf::Rect <int> faceRect;
-    faceRect.top = 588 + tileHeight;
-    faceRect.left = 78 + tileWidth;
+    faceRect.top = 612;
+    faceRect.left = 99;
     faceRect.height = tileHeight;
     faceRect.width = tileWidth;
     rects[2] = faceRect;
     
     // Left image
     sf::Rect <int> leftRect;
-    leftRect.top = 620 + tileHeight;
-    leftRect.left = -19 + tileWidth;
+    leftRect.top = 644;
+    leftRect.left = 5;
     leftRect.height = tileHeight;
     leftRect.width = tileWidth;
     rects[3] = leftRect;
@@ -55,7 +55,7 @@ Hero::Hero(string name, sf::Texture &texture) {
 
     sf::Sprite sprite;
     sprite.setTexture(texture);
-    sprite.setTextureRect(rects[3]);
+    sprite.setTextureRect(rects[2]);
     setSprite(sprite);
     
     cout << "Texture size " << texture.getSize().x << "/" << texture.getSize().y << endl;

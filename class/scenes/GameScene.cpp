@@ -7,7 +7,6 @@
 //
 
 #include <SFML/Graphics.hpp>
-#include "Helper.h"
 #include "GameScene.h"
 #include "Hero.h"
 

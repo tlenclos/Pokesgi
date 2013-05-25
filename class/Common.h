@@ -15,6 +15,7 @@
 class Common {
 public:
     static Settings settings;
+    static void* loadFile(const char * filename, bool appendNull);
 };
 
 #endif /* defined(__Pokesgi__Common__) */

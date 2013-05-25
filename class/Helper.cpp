@@ -10,7 +10,7 @@
 
 void* Helper::loadFile( const char * filename, bool appendNull ) {
     
-    FILE* f = fopen( filename, "r" );
+    FILE* f = fopen( filename, "rb" );
     if ( !f ) {
         return 0;
     }

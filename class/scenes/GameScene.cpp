@@ -26,8 +26,8 @@ int GameScene::Run(sf::RenderWindow &app) {
     
     // Ressources
     string resPathMap = resourcePath() + "map.tmx";
-    string resPathTileset = resourcePath() + "tileset-shinygold.png";
-    string resPathTilesetCharacters = resourcePath() + "personen-dp.png";
+    string resPathTileset = resourcePath() + "images/tileset-shinygold.png";
+    string resPathTilesetCharacters = resourcePath() + "images/personen-dp.png";
     
     // Test Hero
     sf::Image tilesetImageCharacters;

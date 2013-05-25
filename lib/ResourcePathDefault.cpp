@@ -2,6 +2,6 @@
 
 std::string resourcePath(void)
 {
-    std::string rpath;
+    std::string rpath = "res/";
     return rpath;
 }

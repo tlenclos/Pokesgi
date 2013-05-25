@@ -48,7 +48,7 @@ int main(int, char const**)
     
     //App icon
     sf::Image icon;
-    if (!icon.loadFromFile(resourcePath() + "icon.png")) {
+    if (!icon.loadFromFile(resourcePath() + "images/icon.png")) {
         return EXIT_FAILURE;
     }
     app.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());

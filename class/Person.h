@@ -23,6 +23,13 @@ private:
 public:
     static int tileHeight;
     static int tileWidth;
+    enum Orientation {
+        North = 0,
+        East,
+        South,
+        West
+    };
+    Orientation orientation;
     
     Person(); // Constructeur
     Person(string name);

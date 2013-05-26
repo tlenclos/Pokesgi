@@ -7,6 +7,7 @@
 //
 
 #include <SFML/Graphics.hpp>
+#include "AnimatedSprite.h"
 #include "GameScene.h"
 #include "Hero.h"
 
@@ -27,25 +28,27 @@ int GameScene::Run(sf::RenderWindow &app) {
     string resPathMap = resourcePath() + "map.tmx";
     string resPathTileset = resourcePath() + "images/tileset-shinygold.png";
     string resPathTilesetCharacters = resourcePath() + "images/personen-dp.png";
+    sf::Image tilesetImage;
+    sf::Image tilesetImageCharacters;
+    sf::Texture tilesetTexture;
+    sf::Texture tilesetTextureCharacters;
     
     // Test Hero
-    sf::Image tilesetImageCharacters;
     if (!tilesetImageCharacters.loadFromFile(resPathTilesetCharacters))
     {
         cout << "Failed to load characters tile sheet." << endl;
         return false;
     }
-    sf::Texture tilesetTextureCharacters;
     tilesetTextureCharacters.loadFromImage(tilesetImageCharacters);
-    
+ 
     Hero ash("Ash", tilesetTextureCharacters);
-    sf::Vector2u initPosition(2, 5);
+    sf::Vector2u initPosition(0, 0);
     ash.setPosition(initPosition);
     cout << ash.getName() + " est à la position " << ash.getPosition().x << "/" << ash.getPosition().y << endl;
     
     // Map loader
     const char* resPathMapChar = const_cast<char*>(resPathMap.c_str());
-    char * xml = (char*) Helper::loadFile(resPathMapChar, true );
+    char * xml = (char*) Common::loadFile(resPathMapChar, true );
     NLTmxMap* map = NLLoadTmxMap( xml );
     
     
@@ -57,13 +60,11 @@ int GameScene::Run(sf::RenderWindow &app) {
     std::vector <Layer> layers;
     
     // Tileset loader
-    sf::Image tilesetImage;
     if (!tilesetImage.loadFromFile(resPathTileset)) // Load the tileset image
     {
         cout << "Failed to load tile sheet." << endl;
         return false;
     }
-    sf::Texture tilesetTexture;
     tilesetTexture.loadFromImage(tilesetImage);
     
     sf::Vector2u tilesetSize = tilesetImage.getSize();
@@ -119,6 +120,8 @@ int GameScene::Run(sf::RenderWindow &app) {
         layers.push_back(layerMap);
     }
     
+    sf::Clock frameClock;
+    
     while(running) {
         //Verifying events
         while (app.pollEvent(event))
@@ -136,6 +139,11 @@ int GameScene::Run(sf::RenderWindow &app) {
             ash.listenInputs();
         }
         
+        app.clear();
+        
+        // update AnimatedSprite
+        ash.update(frameClock.restart());
+        
         // Draw
         for (int layer = 0; layer < layers.size(); layer++)
         {
@@ -144,8 +152,9 @@ int GameScene::Run(sf::RenderWindow &app) {
                 app.draw(layers[layer].tiles[tile]);
             }
         }
-        app.draw(ash.getSprite());
         
+        app.draw(ash.getSprite());
+
         app.display();
     }
     

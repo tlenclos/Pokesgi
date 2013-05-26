@@ -12,57 +12,53 @@
 using namespace std;
 
 void Hero::heroInit() {
-    // Rects position for the 4 character images (back, right, face, left)
-    rects = new sf::Rect<int>[4];
+    // Aniations
+    Animation backAnimation;
+    backAnimation.setSpriteSheet(texture);
+    backAnimation.addFrame(sf::IntRect(4, 580, tileWidth, tileHeight));
+    backAnimation.addFrame(sf::IntRect(99, 579, tileWidth, tileHeight));
+    backAnimation.addFrame(sf::IntRect(4, 580, tileWidth, tileHeight));
+    backAnimation.addFrame(sf::IntRect(99, 579, tileWidth, tileHeight));
+    animations[0] = backAnimation;
     
-    // Back image
-    sf::Rect <int> backRect;
-    backRect.top = 580;
-    backRect.left = 4;
-    backRect.height = tileHeight;
-    backRect.width = tileWidth;
-    rects[0] = backRect;
-   
-    // Right image
-    sf::Rect <int> rightRect;
-    rightRect.top = 580;
-    rightRect.left = 52;
-    rightRect.height = tileHeight;
-    rightRect.width = tileWidth;
-    rects[1] = rightRect;
+    Animation rightAnimation;
+    rightAnimation.setSpriteSheet(texture);
+    rightAnimation.addFrame(sf::IntRect(52, 580, tileWidth, tileHeight));
+    rightAnimation.addFrame(sf::IntRect(52, 611, tileWidth, tileHeight));
+    rightAnimation.addFrame(sf::IntRect(52, 580, tileWidth, tileHeight));
+    rightAnimation.addFrame(sf::IntRect(52, 611, tileWidth, tileHeight));
+    animations[1] = rightAnimation;
     
-    // Face image
-    sf::Rect <int> faceRect;
-    faceRect.top = 612;
-    faceRect.left = 99;
-    faceRect.height = tileHeight;
-    faceRect.width = tileWidth;
-    rects[2] = faceRect;
+    Animation faceAnimation;
+    faceAnimation.setSpriteSheet(texture);
+    faceAnimation.addFrame(sf::IntRect(98, 612, tileWidth, tileHeight));
+    faceAnimation.addFrame(sf::IntRect(98, 643, tileWidth, tileHeight));
+    faceAnimation.addFrame(sf::IntRect(98, 612, tileWidth, tileHeight));
+    faceAnimation.addFrame(sf::IntRect(98, 643, tileWidth, tileHeight));
+    animations[2] = faceAnimation;
     
-    // Left image
-    sf::Rect <int> leftRect;
-    leftRect.top = 644;
-    leftRect.left = 5;
-    leftRect.height = tileHeight;
-    leftRect.width = tileWidth;
-    rects[3] = leftRect;
+    Animation leftAnimation;
+    leftAnimation.setSpriteSheet(texture);
+    leftAnimation.addFrame(sf::IntRect(4, 644, tileWidth, tileHeight));
+    leftAnimation.addFrame(sf::IntRect(4, 611, tileWidth, tileHeight));
+    leftAnimation.addFrame(sf::IntRect(4, 644, tileWidth, tileHeight));
+    leftAnimation.addFrame(sf::IntRect(4, 611, tileWidth, tileHeight));
+    animations[3] = leftAnimation;
+    
+    // Sprite
+    AnimatedSprite sprite(sf::seconds(0.2));
+    sprite.setAnimation(animations[2]);
+    setSprite(sprite);
 }
 
 Hero::Hero(string name, sf::Texture &texture) {
-    heroInit();
     setName(name);
     setTexture(texture);
-
-    sf::Sprite sprite;
-    sprite.setTexture(texture);
-    sprite.setTextureRect(rects[2]);
-    setSprite(sprite);
-    
-    cout << "Texture size " << texture.getSize().x << "/" << texture.getSize().y << endl;
+    heroInit();
 }
 
 // Getters
-sf::Sprite Hero::getSprite() const {
+AnimatedSprite Hero::getSprite() const {
     return sprite;
 }
 sf::Texture Hero::getTexture() const {
@@ -70,7 +66,7 @@ sf::Texture Hero::getTexture() const {
 }
 
 // Setters
-void Hero::setSprite(sf::Sprite newSprite) {
+void Hero::setSprite(AnimatedSprite newSprite) {
     sprite = newSprite;
 }
 void Hero::setTexture(sf::Texture newTexture) {
@@ -81,27 +77,49 @@ void Hero::setTexture(sf::Texture newTexture) {
 void Hero::listenInputs() {
     sf::Vector2u position = getPosition();
     int speed = 3;
+    bool inAction = false;
+    Orientation newOrientation = orientation;
     
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         cout << "Up" << endl;
         position.y -= speed;
-        sprite.setTextureRect(rects[0]);
+        newOrientation = Orientation::North;
+        inAction = true;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Right)) {
         cout << "Right" << endl;
         position.x += speed;
-        sprite.setTextureRect(rects[1]);
+        newOrientation = Orientation::East;
+        inAction = true;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Down)) {
         cout << "Down" << endl;
         position.y += speed;
-        sprite.setTextureRect(rects[2]);
+        newOrientation = Orientation::South;
+        inAction = true;
     } else if (sf::Keyboard::isKeyPressed(sf::Keyboard::Left)) {
         cout << "Left" << endl;
         position.x -= speed;
-        sprite.setTextureRect(rects[3]);
+        newOrientation = Orientation::West;
+        inAction = true;
+    }
+    
+    if (newOrientation != orientation) {
+        orientation = newOrientation;
+        sprite.setAnimation(animations[orientation]);
+    }
+    
+    if (inAction) {
+        sprite.play();
+    } else {
+        sprite.pause();
     }
     
     setPosition(position);
     sprite.setPosition(position.x, position.y);
+}
+
+// Update sprite state
+void Hero::update(sf::Time time) {
+    sprite.update(time);
 }
 
 // Destructor

@@ -13,13 +13,14 @@
 #include <SFML/Graphics.hpp>
 
 #include "Trainer.h"
+#include "AnimatedSprite.h"
 
 class Hero : public Trainer
 {
 private:
     // Variables
-    sf::Rect <int> *rects;
-    sf::Sprite sprite;
+    Animation animations[4];
+    AnimatedSprite sprite;
     sf::Texture texture;
 public:
     Hero(); // Constructeur
@@ -27,16 +28,17 @@ public:
     ~Hero(); // Destructeur
     
     // Getters
-    sf::Sprite getSprite() const;
+    AnimatedSprite getSprite() const;
     sf::Texture getTexture() const;
     
     // Setters
-    void setSprite(sf::Sprite sprite);
+    void setSprite(AnimatedSprite sprite);
     void setTexture(sf::Texture texture);
     
     // Methodes
     void heroInit();
     void listenInputs();
+    void update(sf::Time time); // update state
 };
 
 #endif /* defined(__Pokesgi__Hero__) */

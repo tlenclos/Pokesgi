@@ -18,6 +18,8 @@
     <ClCompile Include="class\Pokemon.cpp" />
     <ClCompile Include="class\scenes\GameScene.cpp" />
     <ClCompile Include="class\Trainer.cpp" />
+    <ClCompile Include="lib\AnimatedSprite.cpp" />
+    <ClCompile Include="lib\Animation.cpp" />
     <ClCompile Include="lib\NLTmxMap.cpp" />
     <ClCompile Include="lib\ResourcePathDefault.cpp" />
     <ClCompile Include="lib\Settings.cpp" />
@@ -32,6 +34,8 @@
     <ClInclude Include="class\SceneContainer.h" />
     <ClInclude Include="class\scenes\GameScene.h" />
     <ClInclude Include="class\Trainer.h" />
+    <ClInclude Include="lib\AnimatedSprite.h" />
+    <ClInclude Include="lib\Animation.h" />
     <ClInclude Include="lib\NLTmxMap.h" />
     <ClInclude Include="lib\RapidXML\rapidxml.hpp" />
     <ClInclude Include="lib\RapidXML\rapidxml_iterators.hpp" />
@@ -96,11 +100,14 @@
       <Optimization>MaxSpeed</Optimization>
       <FunctionLevelLinking>true</FunctionLevelLinking>
       <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>C:\SFML-2.0-32\include;class;lib;lib\RapidXML;class\scenes;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
     </ClCompile>
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <EnableCOMDATFolding>true</EnableCOMDATFolding>
       <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\SFML-2.0-32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>sfml-graphics.lib;sfml-audio.lib;sfml-system.lib;sfml-window.lib;sfml-network.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />

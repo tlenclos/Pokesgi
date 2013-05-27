@@ -37,7 +37,7 @@ public:
     
     // Methodes
     void heroInit();
-    void listenInputs();
+    void listenInputs(sf::Time elapsedTime);
     void update(sf::Time time); // update state
 };
 

@@ -45,7 +45,8 @@ int main(int, char const**)
     
     //Window creation
     sf::RenderWindow app(sf::VideoMode(width, height), appTitle);
-    
+    app.setFramerateLimit(60);
+
     //App icon
     sf::Image icon;
     if (!icon.loadFromFile(resourcePath() + "images/icon.png")) {

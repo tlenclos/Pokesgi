@@ -74,12 +74,12 @@ void Hero::setTexture(sf::Texture newTexture) {
 }
 
 // Add controls to move hero
-void Hero::listenInputs() {
+void Hero::listenInputs(sf::Time elapsedTime) {
     sf::Vector2u position = getPosition();
-    int speed = 3;
+    int speed = 150*elapsedTime.asSeconds();
     bool inAction = false;
     Orientation newOrientation = orientation;
-    
+
     if (sf::Keyboard::isKeyPressed(sf::Keyboard::Up)) {
         cout << "Up" << endl;
         position.y -= speed;

@@ -123,6 +123,7 @@ int GameScene::Run(sf::RenderWindow &app) {
     sf::Clock frameClock;
     
     while(running) {
+        sf::Time dt = frameClock.restart();
         //Verifying events
         while (app.pollEvent(event))
         {
@@ -136,13 +137,14 @@ int GameScene::Run(sf::RenderWindow &app) {
                 return (-1);
             }
             
-            ash.listenInputs();
+            
         }
-        
+
+        ash.listenInputs(dt);
         app.clear();
         
         // update AnimatedSprite
-        ash.update(frameClock.restart());
+        ash.update(dt);
         
         // Draw
         for (int layer = 0; layer < layers.size(); layer++)

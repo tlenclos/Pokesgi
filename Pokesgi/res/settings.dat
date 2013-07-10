@@ -1,0 +1,19 @@
+# screen size
+width = 512
+height = 512
+
+# windows title
+title = Pokesgi
+
+# hero tile
+hero.back.x = 4
+hero.back.y = 580
+hero.backwalk.x = 4
+hero.backwalk.y = 580
+
+hero.right.x = 52
+hero.right.y = 580
+hero.face.x = 99
+hero.face.y = 612
+hero.left.x = 5
+hero.left.y = 644

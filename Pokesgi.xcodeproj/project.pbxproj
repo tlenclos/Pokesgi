@@ -1,0 +1,444 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F2322DCC1751288400D07992 /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2322DCA1751288400D07992 /* Common.cpp */; };
+		F247443A174F98320012A59C /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2474438174F98320012A59C /* GameScene.cpp */; };
+		F267169B178D8D8900DDD617 /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2671699178D8D8900DDD617 /* Item.cpp */; };
+		F28F9D241740039400D9DD8A /* map.tmx in Resources */ = {isa = PBXBuildFile; fileRef = F28F9D1F1740039400D9DD8A /* map.tmx */; };
+		F28F9D31174003A500D9DD8A /* NLTmxMap.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F28F9D26174003A500D9DD8A /* NLTmxMap.cpp */; };
+		F28F9D32174003A500D9DD8A /* license.txt in Resources */ = {isa = PBXBuildFile; fileRef = F28F9D29174003A500D9DD8A /* license.txt */; };
+		F28F9D33174003A500D9DD8A /* manual.html in Resources */ = {isa = PBXBuildFile; fileRef = F28F9D2A174003A500D9DD8A /* manual.html */; };
+		F28F9D34174003A500D9DD8A /* ResourcePath.mm in Sources */ = {isa = PBXBuildFile; fileRef = F28F9D30174003A500D9DD8A /* ResourcePath.mm */; };
+		F29DBE2B174FCA09004F3709 /* Settings.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F29DBE29174FCA09004F3709 /* Settings.cpp */; };
+		F29DBE30174FCC0D004F3709 /* settings.dat in Resources */ = {isa = PBXBuildFile; fileRef = F29DBE2F174FCC0D004F3709 /* settings.dat */; };
+		F29DBE33174FDCA0004F3709 /* Animation.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F29DBE31174FDCA0004F3709 /* Animation.cpp */; };
+		F29DBE36174FDCE0004F3709 /* AnimatedSprite.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F29DBE34174FDCE0004F3709 /* AnimatedSprite.cpp */; };
+		F29DBE3B17501D1E004F3709 /* images in Resources */ = {isa = PBXBuildFile; fileRef = F29DBE3A17501D1E004F3709 /* images */; };
+		F2E690011742CEB90074D322 /* Attack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2E68FFD1742CEB90074D322 /* Attack.cpp */; };
+		F2E690021742CEB90074D322 /* Pokemon.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2E68FFF1742CEB90074D322 /* Pokemon.cpp */; };
+		F2E690051742CF150074D322 /* Trainer.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2E690031742CF150074D322 /* Trainer.cpp */; };
+		F2E690081742D0E20074D322 /* Hero.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2E690061742D0E20074D322 /* Hero.cpp */; };
+		F2E6900B1742D41F0074D322 /* Person.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2E690091742D41F0074D322 /* Person.cpp */; };
+		F2E7B9C31730259500D14181 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2E7B9C21730259500D14181 /* main.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		F2322DCA1751288400D07992 /* Common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Common.cpp; sourceTree = "<group>"; };
+		F2322DCB1751288400D07992 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
+		F2474436174F94A50012A59C /* SceneContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneContainer.h; sourceTree = "<group>"; };
+		F2474438174F98320012A59C /* GameScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = GameScene.cpp; sourceTree = "<group>"; };
+		F2474439174F98320012A59C /* GameScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameScene.h; sourceTree = "<group>"; };
+		F2671699178D8D8900DDD617 /* Item.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Item.cpp; sourceTree = "<group>"; };
+		F267169A178D8D8900DDD617 /* Item.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Item.h; sourceTree = "<group>"; };
+		F28F9D1F1740039400D9DD8A /* map.tmx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = map.tmx; path = res/map.tmx; sourceTree = "<group>"; };
+		F28F9D26174003A500D9DD8A /* NLTmxMap.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = NLTmxMap.cpp; sourceTree = "<group>"; };
+		F28F9D27174003A500D9DD8A /* NLTmxMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NLTmxMap.h; sourceTree = "<group>"; };
+		F28F9D29174003A500D9DD8A /* license.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = license.txt; sourceTree = "<group>"; };
+		F28F9D2A174003A500D9DD8A /* manual.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = manual.html; sourceTree = "<group>"; };
+		F28F9D2B174003A500D9DD8A /* rapidxml.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rapidxml.hpp; sourceTree = "<group>"; };
+		F28F9D2C174003A500D9DD8A /* rapidxml_iterators.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rapidxml_iterators.hpp; sourceTree = "<group>"; };
+		F28F9D2D174003A500D9DD8A /* rapidxml_print.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rapidxml_print.hpp; sourceTree = "<group>"; };
+		F28F9D2E174003A500D9DD8A /* rapidxml_utils.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = rapidxml_utils.hpp; sourceTree = "<group>"; };
+		F28F9D2F174003A500D9DD8A /* ResourcePath.hpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.h; path = ResourcePath.hpp; sourceTree = "<group>"; };
+		F28F9D30174003A500D9DD8A /* ResourcePath.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ResourcePath.mm; sourceTree = "<group>"; };
+		F28F9D3517400E5800D9DD8A /* ResourcePathDefault.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = ResourcePathDefault.cpp; sourceTree = "<group>"; };
+		F28F9D3617400E5800D9DD8A /* ResourcePathDefault.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ResourcePathDefault.h; sourceTree = "<group>"; };
+		F29DBE29174FCA09004F3709 /* Settings.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Settings.cpp; sourceTree = "<group>"; };
+		F29DBE2A174FCA09004F3709 /* Settings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Settings.h; sourceTree = "<group>"; };
+		F29DBE2F174FCC0D004F3709 /* settings.dat */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; name = settings.dat; path = res/settings.dat; sourceTree = "<group>"; };
+		F29DBE31174FDCA0004F3709 /* Animation.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Animation.cpp; sourceTree = "<group>"; };
+		F29DBE32174FDCA0004F3709 /* Animation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Animation.h; sourceTree = "<group>"; };
+		F29DBE34174FDCE0004F3709 /* AnimatedSprite.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = AnimatedSprite.cpp; sourceTree = "<group>"; };
+		F29DBE35174FDCE0004F3709 /* AnimatedSprite.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AnimatedSprite.h; sourceTree = "<group>"; };
+		F29DBE3A17501D1E004F3709 /* images */ = {isa = PBXFileReference; lastKnownFileType = folder; name = images; path = res/images; sourceTree = "<group>"; };
+		F2E68FFD1742CEB90074D322 /* Attack.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Attack.cpp; sourceTree = "<group>"; };
+		F2E68FFE1742CEB90074D322 /* Attack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Attack.h; sourceTree = "<group>"; };
+		F2E68FFF1742CEB90074D322 /* Pokemon.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Pokemon.cpp; sourceTree = "<group>"; };
+		F2E690001742CEB90074D322 /* Pokemon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Pokemon.h; sourceTree = "<group>"; };
+		F2E690031742CF150074D322 /* Trainer.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Trainer.cpp; sourceTree = "<group>"; };
+		F2E690041742CF150074D322 /* Trainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Trainer.h; sourceTree = "<group>"; };
+		F2E690061742D0E20074D322 /* Hero.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Hero.cpp; sourceTree = "<group>"; };
+		F2E690071742D0E20074D322 /* Hero.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Hero.h; sourceTree = "<group>"; };
+		F2E690091742D41F0074D322 /* Person.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Person.cpp; sourceTree = "<group>"; };
+		F2E6900A1742D41F0074D322 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		F2E7B9B91730259500D14181 /* Pokesgi.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pokesgi.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F2E7B9BE1730259500D14181 /* Pokesgi-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Pokesgi-Info.plist"; sourceTree = "<group>"; };
+		F2E7B9C21730259500D14181 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F2E7B9B51730259500D14181 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F2474431174F93E40012A59C /* scenes */ = {
+			isa = PBXGroup;
+			children = (
+				F2474438174F98320012A59C /* GameScene.cpp */,
+				F2474439174F98320012A59C /* GameScene.h */,
+			);
+			path = scenes;
+			sourceTree = "<group>";
+		};
+		F28F9D25174003A500D9DD8A /* lib */ = {
+			isa = PBXGroup;
+			children = (
+				F28F9D3517400E5800D9DD8A /* ResourcePathDefault.cpp */,
+				F28F9D3617400E5800D9DD8A /* ResourcePathDefault.h */,
+				F28F9D26174003A500D9DD8A /* NLTmxMap.cpp */,
+				F28F9D27174003A500D9DD8A /* NLTmxMap.h */,
+				F28F9D28174003A500D9DD8A /* RapidXML */,
+				F28F9D2F174003A500D9DD8A /* ResourcePath.hpp */,
+				F28F9D30174003A500D9DD8A /* ResourcePath.mm */,
+				F29DBE29174FCA09004F3709 /* Settings.cpp */,
+				F29DBE2A174FCA09004F3709 /* Settings.h */,
+				F29DBE31174FDCA0004F3709 /* Animation.cpp */,
+				F29DBE32174FDCA0004F3709 /* Animation.h */,
+				F29DBE34174FDCE0004F3709 /* AnimatedSprite.cpp */,
+				F29DBE35174FDCE0004F3709 /* AnimatedSprite.h */,
+			);
+			path = lib;
+			sourceTree = "<group>";
+		};
+		F28F9D28174003A500D9DD8A /* RapidXML */ = {
+			isa = PBXGroup;
+			children = (
+				F28F9D29174003A500D9DD8A /* license.txt */,
+				F28F9D2A174003A500D9DD8A /* manual.html */,
+				F28F9D2B174003A500D9DD8A /* rapidxml.hpp */,
+				F28F9D2C174003A500D9DD8A /* rapidxml_iterators.hpp */,
+				F28F9D2D174003A500D9DD8A /* rapidxml_print.hpp */,
+				F28F9D2E174003A500D9DD8A /* rapidxml_utils.hpp */,
+			);
+			path = RapidXML;
+			sourceTree = "<group>";
+		};
+		F2E68FFC1742CEB90074D322 /* class */ = {
+			isa = PBXGroup;
+			children = (
+				F2671699178D8D8900DDD617 /* Item.cpp */,
+				F267169A178D8D8900DDD617 /* Item.h */,
+				F2474431174F93E40012A59C /* scenes */,
+				F2E68FFD1742CEB90074D322 /* Attack.cpp */,
+				F2E68FFE1742CEB90074D322 /* Attack.h */,
+				F2E68FFF1742CEB90074D322 /* Pokemon.cpp */,
+				F2E690001742CEB90074D322 /* Pokemon.h */,
+				F2E690031742CF150074D322 /* Trainer.cpp */,
+				F2E690041742CF150074D322 /* Trainer.h */,
+				F2E690061742D0E20074D322 /* Hero.cpp */,
+				F2E690071742D0E20074D322 /* Hero.h */,
+				F2E690091742D41F0074D322 /* Person.cpp */,
+				F2E6900A1742D41F0074D322 /* Person.h */,
+				F2474436174F94A50012A59C /* SceneContainer.h */,
+				F2322DCA1751288400D07992 /* Common.cpp */,
+				F2322DCB1751288400D07992 /* Common.h */,
+			);
+			path = class;
+			sourceTree = "<group>";
+		};
+		F2E7B9AD1730259500D14181 = {
+			isa = PBXGroup;
+			children = (
+				F2E7B9BC1730259500D14181 /* Pokesgi */,
+				F2E7B9BA1730259500D14181 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F2E7B9BA1730259500D14181 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F2E7B9B91730259500D14181 /* Pokesgi.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F2E7B9BC1730259500D14181 /* Pokesgi */ = {
+			isa = PBXGroup;
+			children = (
+				F2E68FFC1742CEB90074D322 /* class */,
+				F28F9D25174003A500D9DD8A /* lib */,
+				F2E7B9C21730259500D14181 /* main.cpp */,
+				F2E7B9C41730259500D14181 /* Resources */,
+				F2E7B9BD1730259500D14181 /* Supporting Files */,
+			);
+			path = Pokesgi;
+			sourceTree = "<group>";
+		};
+		F2E7B9BD1730259500D14181 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F2E7B9BE1730259500D14181 /* Pokesgi-Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F2E7B9C41730259500D14181 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				F29DBE3A17501D1E004F3709 /* images */,
+				F29DBE2F174FCC0D004F3709 /* settings.dat */,
+				F28F9D1F1740039400D9DD8A /* map.tmx */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F2E7B9B81730259500D14181 /* Pokesgi */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F2E7B9CF1730259500D14181 /* Build configuration list for PBXNativeTarget "Pokesgi" */;
+			buildPhases = (
+				F2E7B9B41730259500D14181 /* Sources */,
+				F2E7B9B51730259500D14181 /* Frameworks */,
+				F2E7B9B61730259500D14181 /* Resources */,
+				F2E7B9B71730259500D14181 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Pokesgi;
+			productName = Pokesgi;
+			productReference = F2E7B9B91730259500D14181 /* Pokesgi.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F2E7B9AF1730259500D14181 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0450;
+				ORGANIZATIONNAME = "Thibault Lenclos";
+			};
+			buildConfigurationList = F2E7B9B21730259500D14181 /* Build configuration list for PBXProject "Pokesgi" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = F2E7B9AD1730259500D14181;
+			productRefGroup = F2E7B9BA1730259500D14181 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F2E7B9B81730259500D14181 /* Pokesgi */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F2E7B9B61730259500D14181 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F28F9D241740039400D9DD8A /* map.tmx in Resources */,
+				F28F9D32174003A500D9DD8A /* license.txt in Resources */,
+				F28F9D33174003A500D9DD8A /* manual.html in Resources */,
+				F29DBE30174FCC0D004F3709 /* settings.dat in Resources */,
+				F29DBE3B17501D1E004F3709 /* images in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		F2E7B9B71730259500D14181 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# This shell script simply copies required sfml dylibs/frameworks into the application bundle frameworks folder.\n# If you're using static libraries (which is not recommended) you should remove this script from your project.\n\n# Are we building a project that uses framework or dylibs ?\ncase \"$SFML_BINARY_TYPE\" in\n    DYLIBS)\n        frameworks=\"false\"\n        ;;\n    *)\n        frameworks=\"true\"\n        ;;\nesac\n\n# Echoes to stderr\nerror () # $* message to display\n{\n    echo $* 1>&2\n    exit 2\n}\n\nassert () # $1 is a boolean, $2...N is an error message\n{\n    if [ $# -lt 2 ]\n    then\n        error \"Internal error in assert : not enough args\"\n    fi\n\n    if [ $1 -ne 0 ]\n    then\n        shift\n        error \"$*\"\n    fi\n}\n\nforce_remove () # $1 is a path\n{\n    test $# -eq 1\n    assert $? \"force_remove() requires one parameter\"\n    rm -fr \"$1\"\n    assert $? \"couldn't remove $1\"\n}\n\ncopy () # $1 is a source, $2 is a destination\n{\n    test $# -eq 2\n    assert $? \"copy() requires two parameters\"\n    ditto \"$1\" \"$2\"\n    assert $? \"couldn't copy $1 to $2\"\n}\n\nrequire () # $1 is a SFML module like 'system' or 'audio'\n{\n    dest=\"$BUILT_PRODUCTS_DIR/$PRODUCT_NAME.app/Contents/Frameworks\"\n    \n    if [ -z \"$1\" ]\n    then\n        error \"require() requires one parameter!\"\n    else\n        # clean potentially old stuff\n        force_remove \"$dest/libsfml-$1.2.dylib\"\n        force_remove \"$dest/libsfml-$1-d.2.dylib\"\n        force_remove \"$dest/sfml-$1.framework\"\n    \n        # copy SFML libraries\n        if [ \"$frameworks\" = \"true\" ]\n        then\n            copy \"/Library/Frameworks/sfml-$1.framework\" \"$dest/sfml-$1.framework\"\n        elif [ $CONFIGURATION = \"Debug\" ] && [ $SFML_LINK_DYLIBS_SUFFIX_DEBUG != \"\" ]\n        then\n            copy \"/usr/local/lib/libsfml-$1-d.2.dylib\" \"$dest/libsfml-$1-d.2.dylib\"\n        else\n            copy \"/usr/local/lib/libsfml-$1.2.dylib\" \"$dest/libsfml-$1.2.dylib\"\n        fi\n        \n        if [ \"$1\" = \"audio\" ]\n        then\n            # copy sndfile framework too\n            copy \"/Library/Frameworks/sndfile.framework\" \"$dest/sndfile.framework\"\n        fi\n\n        if [ \"$1\" = \"graphics\" ]\n        then\n            # copy freetype framework too\n            copy \"/Library/Frameworks/freetype.framework\" \"$dest/freetype.framework\"\n        fi\n    fi\n}\n\nif [ -n \"$SFML_SYSTEM\" ]\nthen\n    require \"system\"\nfi\n\nif [ -n \"$SFML_AUDIO\" ]\nthen\n    require \"audio\"\nfi\n\nif [ -n \"$SFML_NETWORK\" ]\nthen\n    require \"network\"\nfi\n\nif [ -n \"$SFML_WINDOW\" ]\nthen\n    require \"window\"\nfi\n\nif [ -n \"$SFML_GRAPHICS\" ]\nthen\n    require \"graphics\"\nfi\n\n                ";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F2E7B9B41730259500D14181 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F2E7B9C31730259500D14181 /* main.cpp in Sources */,
+				F28F9D31174003A500D9DD8A /* NLTmxMap.cpp in Sources */,
+				F28F9D34174003A500D9DD8A /* ResourcePath.mm in Sources */,
+				F2E690011742CEB90074D322 /* Attack.cpp in Sources */,
+				F2E690021742CEB90074D322 /* Pokemon.cpp in Sources */,
+				F2E690051742CF150074D322 /* Trainer.cpp in Sources */,
+				F2E690081742D0E20074D322 /* Hero.cpp in Sources */,
+				F2E6900B1742D41F0074D322 /* Person.cpp in Sources */,
+				F247443A174F98320012A59C /* GameScene.cpp in Sources */,
+				F29DBE2B174FCA09004F3709 /* Settings.cpp in Sources */,
+				F29DBE33174FDCA0004F3709 /* Animation.cpp in Sources */,
+				F29DBE36174FDCE0004F3709 /* AnimatedSprite.cpp in Sources */,
+				F2322DCC1751288400D07992 /* Common.cpp in Sources */,
+				F267169B178D8D8900DDD617 /* Item.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		F2E7B9CD1730259500D14181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX)sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX)sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework ";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX)sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX)sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX)sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Debug;
+		};
+		F2E7B9CE1730259500D14181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				CLANG_CXX_LANGUAGE_STANDARD = "c++0x";
+				CLANG_CXX_LIBRARY = "libstdc++";
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					/Library/Frameworks/,
+					"$(inherited)",
+				);
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				HEADER_SEARCH_PATHS = (
+					/usr/local/include/,
+					"$(inherited)",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					/usr/local/lib/,
+					"$(inherited)",
+				);
+				ONLY_ACTIVE_ARCH = NO;
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					"$(SFML_SYSTEM)",
+					"$(SFML_WINDOW)",
+					"$(SFML_GRAPHICS)",
+					"$(SFML_AUDIO)",
+					"$(SFML_NETWORK)",
+				);
+				SFML_AUDIO = "$(SFML_LINK_PREFIX)sfml-audio$(SFML_LINK_SUFFIX)";
+				SFML_BINARY_TYPE = FRAMEWORKS;
+				SFML_GRAPHICS = "$(SFML_LINK_PREFIX)sfml-graphics$(SFML_LINK_SUFFIX)";
+				SFML_LINK_DYLIBS_PREFIX = "-l";
+				SFML_LINK_DYLIBS_SUFFIX = "";
+				SFML_LINK_FRAMEWORKS_PREFIX = "-framework ";
+				SFML_LINK_FRAMEWORKS_SUFFIX = "";
+				SFML_LINK_PREFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_PREFIX)";
+				SFML_LINK_SUFFIX = "$(SFML_LINK_$(SFML_BINARY_TYPE)_SUFFIX)";
+				SFML_NETWORK = "$(SFML_LINK_PREFIX)sfml-network$(SFML_LINK_SUFFIX)";
+				SFML_SYSTEM = "$(SFML_LINK_PREFIX)sfml-system$(SFML_LINK_SUFFIX)";
+				SFML_WINDOW = "$(SFML_LINK_PREFIX)sfml-window$(SFML_LINK_SUFFIX)";
+				SUPPORTED_PLATFORMS = macosx;
+			};
+			name = Release;
+		};
+		F2E7B9D01730259500D14181 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Pokesgi/Pokesgi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		F2E7B9D11730259500D14181 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Pokesgi/Pokesgi-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F2E7B9B21730259500D14181 /* Build configuration list for PBXProject "Pokesgi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E7B9CD1730259500D14181 /* Debug */,
+				F2E7B9CE1730259500D14181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F2E7B9CF1730259500D14181 /* Build configuration list for PBXNativeTarget "Pokesgi" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F2E7B9D01730259500D14181 /* Debug */,
+				F2E7B9D11730259500D14181 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F2E7B9AF1730259500D14181 /* Project object */;
+}

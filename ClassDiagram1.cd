@@ -1,28 +1,28 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
   <Class Name="Attack">
-    <Position X="11.75" Y="0.5" Width="1.5" />
+    <Position X="10.25" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AIAACAAAAAAAgAAAAAUAAAAAAZAFAABACAAEQAAAAgA=</HashCode>
       <FileName>class\Attack.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Common">
-    <Position X="5" Y="2.75" Width="1.5" />
+    <Position X="4.5" Y="3.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAEAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>class\Common.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Hero">
-    <Position X="7.25" Y="0.5" Width="1.5" />
+    <Position X="6.75" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAEAAAAAAgBAARAAAAAgABAQEgAgAAAAAAAEAAA=</HashCode>
       <FileName>class\Hero.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Person">
-    <Position X="2.75" Y="0.5" Width="1.5" />
+    <Position X="2.25" Y="0.5" Width="1.5" />
     <NestedTypes>
       <Enum Name="Person::Orientation" Collapsed="true">
         <TypeIdentifier>
@@ -36,7 +36,7 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Pokemon">
-    <Position X="9.5" Y="0.5" Width="1.5" />
+    <Position X="8.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAIgAAACAIACAFAACAEAQAAAIREVAUDBBACEAAAAAgI=</HashCode>
       <FileName>class\Pokemon.h</FileName>
@@ -57,28 +57,28 @@
     </TypeIdentifier>
   </Class>
   <Class Name="Trainer">
-    <Position X="5" Y="0.5" Width="1.5" />
+    <Position X="4.5" Y="0.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAAAACAAAAAAAAAAAAAAkA=</HashCode>
+      <HashCode>AAEAAQAAAAAAAAAAAAgAAAAQAACBAAAAAAAAAAAACkA=</HashCode>
       <FileName>class\Trainer.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="AnimatedSprite">
-    <Position X="13.75" Y="0.5" Width="1.5" />
+    <Position X="12" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ADAAAxAChAAIAAEAAAJAAAAAAACgAAAUIAAkAAQNIAA=</HashCode>
       <FileName>lib\AnimatedSprite.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Animation">
-    <Position X="7.25" Y="4.5" Width="1.5" />
+    <Position X="6.75" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>QAAEAQAAAJAAAAAggAAAAIAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>lib\Animation.h</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="Settings">
-    <Position X="2.75" Y="4.5" Width="1.5" />
+    <Position X="2.25" Y="4.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAIABAQAAABABAAIAAAAAgAAAAAAAAgAAQAEEAACA=</HashCode>
       <FileName>lib\Settings.h</FileName>

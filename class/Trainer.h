@@ -27,7 +27,7 @@ public:
     
     // Variables
     vector<Pokemon> pokemons;
-    vector<Items> items;
+    vector<Item> items;
 	int gold;
 
 	

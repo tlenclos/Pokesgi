@@ -14,6 +14,7 @@
     <ClCompile Include="class\Attack.cpp" />
     <ClCompile Include="class\Common.cpp" />
     <ClCompile Include="class\Hero.cpp" />
+    <ClCompile Include="class\Item.cpp" />
     <ClCompile Include="class\Person.cpp" />
     <ClCompile Include="class\Pokemon.cpp" />
     <ClCompile Include="class\scenes\GameScene.cpp" />
@@ -29,6 +30,7 @@
     <ClInclude Include="class\Attack.h" />
     <ClInclude Include="class\Common.h" />
     <ClInclude Include="class\Hero.h" />
+    <ClInclude Include="class\Item.h" />
     <ClInclude Include="class\Person.h" />
     <ClInclude Include="class\Pokemon.h" />
     <ClInclude Include="class\SceneContainer.h" />
@@ -46,6 +48,8 @@
     <ClInclude Include="lib\Settings.h" />
   </ItemGroup>
   <ItemGroup>
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
     <None Include="lib\RapidXML\manual.html" />
     <None Include="lib\ResourcePath.mm" />
     <None Include="res\settings.dat" />
@@ -91,7 +95,7 @@
     <Link>
       <GenerateDebugInformation>true</GenerateDebugInformation>
       <AdditionalLibraryDirectories>C:\SFML-2.0-32\lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
-      <AdditionalDependencies>%(AdditionalLibraryDirectories);</AdditionalDependencies>
+      <AdditionalDependencies>sfml-main.lib;sfml-audio.lib;sfml-graphics.lib;sfml-window.lib;sfml-system.lib;%(AdditionalLibraryDirectories)</AdditionalDependencies>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">

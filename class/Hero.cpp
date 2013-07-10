@@ -12,7 +12,8 @@
 using namespace std;
 
 void Hero::heroInit() {
-    // Aniations
+    // Animations
+	// Going north
     Animation backAnimation;
     backAnimation.setSpriteSheet(texture);
     backAnimation.addFrame(sf::IntRect(4, 580, tileWidth, tileHeight));
@@ -21,6 +22,7 @@ void Hero::heroInit() {
     backAnimation.addFrame(sf::IntRect(99, 579, tileWidth, tileHeight));
     animations[0] = backAnimation;
     
+	//Going east
     Animation rightAnimation;
     rightAnimation.setSpriteSheet(texture);
     rightAnimation.addFrame(sf::IntRect(52, 580, tileWidth, tileHeight));
@@ -29,6 +31,7 @@ void Hero::heroInit() {
     rightAnimation.addFrame(sf::IntRect(52, 611, tileWidth, tileHeight));
     animations[1] = rightAnimation;
     
+	// Going south
     Animation faceAnimation;
     faceAnimation.setSpriteSheet(texture);
     faceAnimation.addFrame(sf::IntRect(98, 612, tileWidth, tileHeight));
@@ -37,6 +40,7 @@ void Hero::heroInit() {
     faceAnimation.addFrame(sf::IntRect(98, 643, tileWidth, tileHeight));
     animations[2] = faceAnimation;
     
+	// Going west
     Animation leftAnimation;
     leftAnimation.setSpriteSheet(texture);
     leftAnimation.addFrame(sf::IntRect(4, 644, tileWidth, tileHeight));

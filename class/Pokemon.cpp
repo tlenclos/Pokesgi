@@ -12,38 +12,42 @@ using namespace std;
 
 //Constructor
 Pokemon::Pokemon() {
-    hp = 100;
+    healthPoint = 100;
     listAttack = * new vector<Attack>(0);
 }
 
 //Getters
 string Pokemon::getName() const { return name; }
 string Pokemon::getType() const { return type; }
-int Pokemon::getHP() const { return hp; }
-int Pokemon::getLevel() const { return lvl; }
-int Pokemon::getAtk() const { return atk; }
-int Pokemon::getDef() const { return def; }
-int Pokemon::getSpd() const { return spd; }
+int Pokemon::getHealthPoint() const { return healthPoint; }
+int Pokemon::getLevel() const { return level; }
+int Pokemon::getAttack() const { return attack; }
+int Pokemon::getDefense() const { return defense; }
+int Pokemon::getSpeed() const { return speed; }
 
 //Setters
 void Pokemon::setName(string newName) { name = newName; }
 void Pokemon::setType(string newType) { type = newType; }
-void Pokemon::setHP(int newHP) { hp = newHP; }
-void Pokemon::setLevel(int newLvl) { lvl = newLvl; }
-void Pokemon::setAtk(int newAtk) { atk = newAtk; }
-void Pokemon::setDef(int newDef) { def = newDef; }
-void Pokemon::setSpd(int newSpd) { spd = newSpd; }
+void Pokemon::setHealthPoint(int newHP) { healthPoint = newHP; }
+void Pokemon::setLevel(int newLvl) { level = newLvl; }
+void Pokemon::setAttack(int newAtk) { attack = newAtk; }
+void Pokemon::setDefense(int newDef) { defense = newDef; }
+void Pokemon::setSpeed(int newSpd) { speed = newSpd; }
 
 //Methodes
-void Pokemon::addDamage(int nbDamage){
-    hp -= nbDamage;
-    if (hp < 0)
-        hp = 0;
+void Pokemon::takeDamage(int nbDamage){
+    healthPoint -= nbDamage;
+    if (healthPoint < 0)
+        healthPoint = 0;
+}
+
+void Pokemon::heal(int nbHealthPoint){
+	healthPoint += nbHealthPoint;
 }
 
 void Pokemon::launchAttack(Pokemon &pkmTarget, Attack &attack){
     if (attack.getPP() > 0) {
-        pkmTarget.addDamage(attack.getDamage());
+        pkmTarget.takeDamage(attack.getDamage());
         attack--;
     }
 }

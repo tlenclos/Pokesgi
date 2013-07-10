@@ -54,6 +54,9 @@
     <ClCompile Include="lib\Animation.cpp">
       <Filter>Fichiers sources</Filter>
     </ClCompile>
+    <ClCompile Include="class\Item.cpp">
+      <Filter>Fichiers sources</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="class\Attack.h">
@@ -110,6 +113,9 @@
     <ClInclude Include="lib\Animation.h">
       <Filter>Fichiers sources</Filter>
     </ClInclude>
+    <ClInclude Include="class\Item.h">
+      <Filter>Fichiers d%27en-tête</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <None Include="lib\ResourcePath.mm">
@@ -117,6 +123,8 @@
     </None>
     <None Include="lib\RapidXML\manual.html" />
     <None Include="res\settings.dat" />
+    <None Include="ClassDiagram.cd" />
+    <None Include="ClassDiagram1.cd" />
   </ItemGroup>
   <ItemGroup>
     <Text Include="lib\RapidXML\license.txt" />

@@ -30,10 +30,10 @@ using namespace std;
 int main(int, char const**)
 {
     // Test settings
-	int width, height;
+    int width, height;
     string appTitle;
     Common::settings.Get("width", &width);
-	Common::settings.Get("height", &height);
+    Common::settings.Get("height", &height);
     Common::settings.Get("title", &appTitle);
     assert(width > 0);
     assert(height > 0);

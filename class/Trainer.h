@@ -15,6 +15,7 @@
 
 #include "Person.h"
 #include "Pokemon.h"
+#include "Item.h"
 
 using namespace std;
 
@@ -26,7 +27,16 @@ public:
     
     // Variables
     vector<Pokemon> pokemons;
-    //vector<Item> items;   TODO after
+    vector<Items> items;
+	int gold;
+
+	
+    int getGold() const;
+    void setGold(int newGold);
+
+    void addGold(int numberGold);
+    void removeGold(int numberGold);
+
 };
 
 #endif /* defined(__Pokesgi__Trainer__) */

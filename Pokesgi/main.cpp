@@ -23,6 +23,7 @@
 #include "Settings.h"
 #include "SceneContainer.h"
 #include "GameScene.h"
+#include "BattleScene.h"
 
 using namespace std;
 
@@ -55,8 +56,11 @@ int main(int, char const**)
     app.setIcon(icon.getSize().x, icon.getSize().y, icon.getPixelsPtr());
     
     //Screens preparations
-    GameScene game;
-    scenes.push_back (&game);
+//    GameScene game;
+//    scenes.push_back (&game);
+    
+    BattleScene battle;
+    scenes.push_back(&battle);
     
     //Main loop
     while (screen >= 0)

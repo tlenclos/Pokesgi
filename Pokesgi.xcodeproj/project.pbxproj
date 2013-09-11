@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		59EF021117C3FC9D00CD3B82 /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EF020F17C3FC9D00CD3B82 /* BattleScene.cpp */; };
 		F2322DCC1751288400D07992 /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2322DCA1751288400D07992 /* Common.cpp */; };
 		F247443A174F98320012A59C /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2474438174F98320012A59C /* GameScene.cpp */; };
 		F267169B178D8D8900DDD617 /* Item.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2671699178D8D8900DDD617 /* Item.cpp */; };
@@ -29,6 +30,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		59EF020F17C3FC9D00CD3B82 /* BattleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleScene.cpp; sourceTree = "<group>"; };
+		59EF021017C3FC9D00CD3B82 /* BattleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleScene.h; sourceTree = "<group>"; };
 		F2322DCA1751288400D07992 /* Common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Common.cpp; sourceTree = "<group>"; };
 		F2322DCB1751288400D07992 /* Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Common.h; sourceTree = "<group>"; };
 		F2474436174F94A50012A59C /* SceneContainer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SceneContainer.h; sourceTree = "<group>"; };
@@ -86,6 +89,8 @@
 		F2474431174F93E40012A59C /* scenes */ = {
 			isa = PBXGroup;
 			children = (
+				59EF020F17C3FC9D00CD3B82 /* BattleScene.cpp */,
+				59EF021017C3FC9D00CD3B82 /* BattleScene.h */,
 				F2474438174F98320012A59C /* GameScene.cpp */,
 				F2474439174F98320012A59C /* GameScene.h */,
 			);
@@ -291,6 +296,7 @@
 				F29DBE36174FDCE0004F3709 /* AnimatedSprite.cpp in Sources */,
 				F2322DCC1751288400D07992 /* Common.cpp in Sources */,
 				F267169B178D8D8900DDD617 /* Item.cpp in Sources */,
+				59EF021117C3FC9D00CD3B82 /* BattleScene.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

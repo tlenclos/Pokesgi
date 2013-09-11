@@ -30,6 +30,13 @@ public:
     //Variables
     std::vector<Attack> listAttack;
     
+    const static int tileHeight = 32;
+    const static int tileWidth = 32;
+    const static int tileFront = 2;     //Index of the Row to get pokemon in front
+    const static int tileBack = 0;      //Index of the Row to get pokemon in back
+    const static int nbTileCol = 2;     //Number of columns tiles for a pokemon
+    const static int nbTileRow = 4;     //Number of rows tiles for a pokemon
+    
     //Getters
     string getName() const;
     string getType() const;

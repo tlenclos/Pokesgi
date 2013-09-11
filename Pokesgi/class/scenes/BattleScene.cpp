@@ -89,7 +89,7 @@ void BattleScene::DrawScene(sf::RenderWindow &app) {
 void BattleScene::ChangePokemon(bool isPlayer, int pokCol, int pokRow) {
     int tileHeight = Pokemon::tileHeight;
     int tileWidth = Pokemon::tileWidth;
-    cout << "Height=" << tileHeight << " Width=" << tileWidth << endl;
+    int scaleSize = 6;
     
     if (isPlayer) {     //Bottom-Left Back
         int x = pokCol * tileWidth*Pokemon::nbTileCol;
@@ -97,13 +97,15 @@ void BattleScene::ChangePokemon(bool isPlayer, int pokCol, int pokRow) {
         cout << "Back : " << "x=" << x << " y=" << y << endl;
         pokemon_b.setTexture(tilesetTexturePokemons);
         pokemon_b.setTextureRect(sf::IntRect(x, y, tileWidth, tileHeight));
-        pokemon_b.setPosition(50, 400);
+        pokemon_b.setPosition(20, 300);
+        pokemon_b.setScale(scaleSize, scaleSize);
     } else {            //Top-Right Front
         int x = pokCol * tileWidth*Pokemon::nbTileCol;
         int y = (pokRow * tileHeight*Pokemon::nbTileRow) + (tileHeight*Pokemon::tileFront);
         cout << "Front : " << "x=" << x << " y=" << y << endl;
         pokemon_f.setTexture(tilesetTexturePokemons);
         pokemon_f.setTextureRect(sf::IntRect(x, y, tileWidth, tileHeight));
-        pokemon_f.setPosition(400, 50);
+        pokemon_f.setPosition(300, 10);
+        pokemon_f.setScale(scaleSize, scaleSize);
     }
 }

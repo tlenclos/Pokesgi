@@ -16,7 +16,13 @@ Pokemon::Pokemon() {
     listAttack = * new vector<Attack>(0);
 }
 
+Pokemon::Pokemon(const int id, const string name) : Pokemon::Pokemon() {
+    this->id = id;
+    this->name = name;
+}
+
 //Getters
+int Pokemon::getId() const { return id; }
 string Pokemon::getName() const { return name; }
 string Pokemon::getType() const { return type; }
 int Pokemon::getHealthPoint() const { return healthPoint; }
@@ -26,6 +32,7 @@ int Pokemon::getDefense() const { return defense; }
 int Pokemon::getSpeed() const { return speed; }
 
 //Setters
+void Pokemon::setId(int newId) { id = newId; }
 void Pokemon::setName(string newName) { name = newName; }
 void Pokemon::setType(string newType) { type = newType; }
 void Pokemon::setHealthPoint(int newHP) { healthPoint = newHP; }

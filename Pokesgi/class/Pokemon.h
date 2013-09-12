@@ -24,8 +24,11 @@ private:
     string name, type;
     
 public:
-    Pokemon();              //Constructeur
-    ~Pokemon();             //Destructeur
+    //Constructeur
+    Pokemon();              
+    Pokemon(const int id, const string name);
+    //Destructeur
+    ~Pokemon();             
     
     //Variables
     std::vector<Attack> listAttack;
@@ -38,6 +41,7 @@ public:
     const static int nbTileRow = 4;     //Number of rows tiles for a pokemon
     
     //Getters
+    int getId() const;
     string getName() const;
     string getType() const;
     int getHealthPoint() const;
@@ -47,6 +51,7 @@ public:
     int getSpeed() const;
 
     //Setters
+    void setId(int newId);
     void setName(string newName);
     void setType(string newType);
     void setHealthPoint(int newHP);

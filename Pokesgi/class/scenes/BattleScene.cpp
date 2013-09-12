@@ -17,7 +17,10 @@ struct Layer{
     int opacity;
 };
 
-BattleScene::BattleScene() {}
+int indexPokPlayer, indexPokCPU;
+
+BattleScene::BattleScene() {
+}
 
 int BattleScene::Run(sf::RenderWindow &app) {
     bool running = true;
@@ -41,14 +44,17 @@ int BattleScene::Run(sf::RenderWindow &app) {
     
     // This stores each layer of sprites/tiles so they can be drawn in order.
     std::vector <Layer> layers;
+    
+    LoadPokemons(listPokemonPlayer);
+    LoadPokemons(listPokemonCPU);
 
-    ChangePokemon(true, 0, 3);  //Dracaufeu in back
-    ChangePokemon(false, 1, 4);  //Tortank in front
+    ChangePokemon(true, 2);     //Dracaufeu in back
+    ChangePokemon(false, 3);    //Pikachu in front
     
     sf::Clock frameClock;
     
     while(running) {
-        sf::Time dt = frameClock.restart();
+//        sf::Time dt = frameClock.restart();
         //Verifying events
         while (app.pollEvent(event))
         {
@@ -86,26 +92,56 @@ void BattleScene::DrawScene(sf::RenderWindow &app) {
     app.draw(pokemon_f);
 }
 
-void BattleScene::ChangePokemon(bool isPlayer, int pokCol, int pokRow) {
+void BattleScene::LoadPokemons(vector<Pokemon> &listPok) {
+    listPok.push_back(Pokemon(1, "Bulbizarre"));
+    listPok.push_back(Pokemon(3, "Florizarre"));
+    listPok.push_back(Pokemon(6, "Dracaufeu"));
+    listPok.push_back(Pokemon(25, "Pikachu"));
+    listPok.push_back(Pokemon(150, "Mewtwo"));
+    
+    cout << "List pokemons: " << listPokemonPlayer.size() << endl;
+    for (auto &p: listPok) {
+        cout << p.getId() << " " << p.getName() << endl;
+    }
+}
+
+void BattleScene::ChangePokemon(bool isPlayer, int indexPok) {
+    Pokemon pok = (isPlayer) ? listPokemonPlayer.at(indexPok) : listPokemonCPU.at(indexPok);
+    
+    DisplayPokemon(isPlayer, pok.getId());
+    
+}
+
+void BattleScene::DisplayPokemon(bool isPlayer, int id) {
     int tileHeight = Pokemon::tileHeight;
     int tileWidth = Pokemon::tileWidth;
-    int scaleSize = 6;
+    const int scaleSize = 6;
     
-    if (isPlayer) {     //Bottom-Left Back
-        int x = pokCol * tileWidth*Pokemon::nbTileCol;
-        int y = (pokRow * tileHeight*Pokemon::nbTileRow) + (tileHeight*Pokemon::tileBack);
-        cout << "Back : " << "x=" << x << " y=" << y << endl;
-        pokemon_b.setTexture(tilesetTexturePokemons);
-        pokemon_b.setTextureRect(sf::IntRect(x, y, tileWidth, tileHeight));
-        pokemon_b.setPosition(20, 300);
-        pokemon_b.setScale(scaleSize, scaleSize);
-    } else {            //Top-Right Front
-        int x = pokCol * tileWidth*Pokemon::nbTileCol;
-        int y = (pokRow * tileHeight*Pokemon::nbTileRow) + (tileHeight*Pokemon::tileFront);
-        cout << "Front : " << "x=" << x << " y=" << y << endl;
-        pokemon_f.setTexture(tilesetTexturePokemons);
-        pokemon_f.setTextureRect(sf::IntRect(x, y, tileWidth, tileHeight));
-        pokemon_f.setPosition(300, 10);
-        pokemon_f.setScale(scaleSize, scaleSize);
+    if (id>3) {         //Double Florizarre
+        id++;
+        if (id>25)      //Double Pikachu
+            id++;
     }
+    
+    const int nbCol = 2;
+    //   const int nbRow = 76;
+    int pokCol = ((id % nbCol) == 0) ? 1 : 0;
+    int pokRow = (id-1) / 2;
+    
+    cout << "Position : Id=" << id << " Col=" << pokCol << " Row=" << pokRow << endl;
+    
+    int tileFace = (isPlayer) ? Pokemon::tileBack : Pokemon::tileFront;
+    int x = pokCol * tileWidth*Pokemon::nbTileCol;
+    int y = (pokRow * tileHeight*Pokemon::nbTileRow) + (tileHeight* tileFace);
+    
+    cout << ((isPlayer) ? "Back : " : "Front :") << "x=" << x << " y=" << y << endl;
+    
+    sf::Sprite *sprite = (isPlayer) ? &pokemon_b : &pokemon_f;
+    sprite->setTexture(tilesetTexturePokemons);
+    sprite->setTextureRect(sf::IntRect(x, y, tileWidth, tileHeight));
+    sprite->setScale(scaleSize, scaleSize);
+    if (isPlayer)
+        sprite->setPosition(20, 300);
+    else
+        sprite->setPosition(300, 10);
 }

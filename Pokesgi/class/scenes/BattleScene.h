@@ -30,6 +30,11 @@ private:
     std::vector<Pokemon> listPokemonPlayer;
     std::vector<Pokemon> listPokemonCPU;
     
+    int indexPokemonPlayer, indexPokemonCPU;
+    
+    sf::Font font;
+    sf::Text labelHPPlayer, labelHPCPU;
+    
 public:
     BattleScene();
     virtual int Run (sf::RenderWindow &app);
@@ -37,6 +42,7 @@ public:
     void LoadPokemons(std::vector<Pokemon> &listPok);
     void ChangePokemon(bool isPlayer, int indexPok);
     void DisplayPokemon(bool isPlayer, int id);
+    void DisplayHP(bool isPlayer, Pokemon &pok);
 };
 
 #endif /* defined(__Pokesgi__BattleScene__) */

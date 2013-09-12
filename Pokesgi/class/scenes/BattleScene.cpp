@@ -17,7 +17,7 @@ struct Layer{
     int opacity;
 };
 
-int indexPokPlayer, indexPokCPU;
+sf::Font font;
 
 BattleScene::BattleScene() {
 }
@@ -45,27 +45,63 @@ int BattleScene::Run(sf::RenderWindow &app) {
     // This stores each layer of sprites/tiles so they can be drawn in order.
     std::vector <Layer> layers;
     
+    font.loadFromFile(resourcePath() + "arial.ttf");
+    
     LoadPokemons(listPokemonPlayer);
     LoadPokemons(listPokemonCPU);
 
     ChangePokemon(true, 2);     //Dracaufeu in back
     ChangePokemon(false, 3);    //Pikachu in front
+
     
     sf::Clock frameClock;
     
     while(running) {
 //        sf::Time dt = frameClock.restart();
         //Verifying events
-        while (app.pollEvent(event))
-        {
-            // Close window : exit
-            if (event.type == sf::Event::Closed) {
-                return (-1);
-            }
-            
-            // Espace pressed : exit
-            if (event.type == sf::Event::KeyPressed && event.key.code == sf::Keyboard::Escape) {
-                return (-1);
+        while (app.pollEvent(event)) {
+            switch (event.type) {
+                //Close window : exit
+                case sf::Event::Closed:
+                    return (-1);
+                    break;
+                    
+                //Key pressed
+                case sf::Event::KeyPressed:
+                    switch (event.key.code) {
+                        //Espace pressed : exit
+                        case sf::Keyboard::Escape:
+                            return (-1);
+                            break;
+                            
+                        default:
+                            break;
+                    }
+                    break;
+                    
+                //Mouse click
+                case sf::Event::MouseButtonPressed:
+                    switch (event.mouseButton.button) {
+                        //Click Left
+                        case sf::Mouse::Button::Left:
+                            cout<<"Click bouton gauche : x=" << event.mouseButton.x << ", y=" << event.mouseButton.y <<endl;
+                            break;
+                        //Wheel
+                        case sf::Mouse::Button::Middle: 
+                            cout<<"Click bouton de la molette"<<endl;
+                            break;
+                        //Click Right
+                        case sf::Mouse::Button::Right:  
+                            cout<<"Click bouton droit"<<endl;
+                            break;
+                            
+                        default:
+                            break;
+                    }
+                    break;
+                    
+                default:
+                    break;
             }
         }
 
@@ -90,6 +126,8 @@ int BattleScene::Run(sf::RenderWindow &app) {
 void BattleScene::DrawScene(sf::RenderWindow &app) {
     app.draw(pokemon_b);
     app.draw(pokemon_f);
+    app.draw(labelHPPlayer);
+    app.draw(labelHPCPU);
 }
 
 void BattleScene::LoadPokemons(vector<Pokemon> &listPok) {
@@ -98,6 +136,7 @@ void BattleScene::LoadPokemons(vector<Pokemon> &listPok) {
     listPok.push_back(Pokemon(6, "Dracaufeu"));
     listPok.push_back(Pokemon(25, "Pikachu"));
     listPok.push_back(Pokemon(150, "Mewtwo"));
+    listPok.push_back(Pokemon(76, "Grolem"));
     
     cout << "List pokemons: " << listPokemonPlayer.size() << endl;
     for (auto &p: listPok) {
@@ -106,11 +145,18 @@ void BattleScene::LoadPokemons(vector<Pokemon> &listPok) {
 }
 
 void BattleScene::ChangePokemon(bool isPlayer, int indexPok) {
+    if (isPlayer)
+        indexPokemonPlayer = indexPok;
+    else
+        indexPokemonCPU = indexPok;
+    
     Pokemon pok = (isPlayer) ? listPokemonPlayer.at(indexPok) : listPokemonCPU.at(indexPok);
     
     DisplayPokemon(isPlayer, pok.getId());
-    
+    DisplayHP(isPlayer, pok);
 }
+
+
 
 void BattleScene::DisplayPokemon(bool isPlayer, int id) {
     int tileHeight = Pokemon::tileHeight;
@@ -134,7 +180,7 @@ void BattleScene::DisplayPokemon(bool isPlayer, int id) {
     int x = pokCol * tileWidth*Pokemon::nbTileCol;
     int y = (pokRow * tileHeight*Pokemon::nbTileRow) + (tileHeight* tileFace);
     
-    cout << ((isPlayer) ? "Back : " : "Front :") << "x=" << x << " y=" << y << endl;
+//    cout << ((isPlayer) ? "Back : " : "Front :") << "x=" << x << " y=" << y << endl;
     
     sf::Sprite *sprite = (isPlayer) ? &pokemon_b : &pokemon_f;
     sprite->setTexture(tilesetTexturePokemons);
@@ -144,4 +190,18 @@ void BattleScene::DisplayPokemon(bool isPlayer, int id) {
         sprite->setPosition(20, 300);
     else
         sprite->setPosition(300, 10);
+}
+
+void BattleScene::DisplayHP(bool isPlayer, Pokemon &pkm) {
+    sf::Text *label = (isPlayer) ? &labelHPPlayer : &labelHPCPU;
+    stringstream hp;
+    hp << pkm.getHealthPoint() << "/" << pkm.getHealthPoint();
+    label->setString(hp.str());
+    label->setFont(font);
+    label->setColor(sf::Color::Black);
+    label->setCharacterSize(20);
+    if (isPlayer)
+        label->setPosition(250,50);
+    else
+        label->setPosition(50,50);
 }

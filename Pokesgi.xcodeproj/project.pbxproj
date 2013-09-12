@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		598F4F5317E1FEC7009145FB /* arial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 598F4F4B17E1FEC7009145FB /* arial.ttf */; };
 		59EF021117C3FC9D00CD3B82 /* BattleScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 59EF020F17C3FC9D00CD3B82 /* BattleScene.cpp */; };
 		F2322DCC1751288400D07992 /* Common.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2322DCA1751288400D07992 /* Common.cpp */; };
 		F247443A174F98320012A59C /* GameScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F2474438174F98320012A59C /* GameScene.cpp */; };
@@ -30,6 +31,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		598F4F4B17E1FEC7009145FB /* arial.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = arial.ttf; path = res/arial.ttf; sourceTree = "<group>"; };
 		59EF020F17C3FC9D00CD3B82 /* BattleScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = BattleScene.cpp; sourceTree = "<group>"; };
 		59EF021017C3FC9D00CD3B82 /* BattleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BattleScene.h; sourceTree = "<group>"; };
 		F2322DCA1751288400D07992 /* Common.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Common.cpp; sourceTree = "<group>"; };
@@ -192,6 +194,7 @@
 		F2E7B9C41730259500D14181 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				598F4F4B17E1FEC7009145FB /* arial.ttf */,
 				F29DBE3A17501D1E004F3709 /* images */,
 				F29DBE2F174FCC0D004F3709 /* settings.dat */,
 				F28F9D1F1740039400D9DD8A /* map.tmx */,
@@ -256,6 +259,7 @@
 				F28F9D33174003A500D9DD8A /* manual.html in Resources */,
 				F29DBE30174FCC0D004F3709 /* settings.dat in Resources */,
 				F29DBE3B17501D1E004F3709 /* images in Resources */,
+				598F4F5317E1FEC7009145FB /* arial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

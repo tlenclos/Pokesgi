@@ -5,7 +5,7 @@
 //  Created by Thibault Lenclos on 25/05/13.
 //  Copyright (c) 2013 Thibault Lenclos. All rights reserved.
 //
-
+#include <stdlib.h>
 #include "Common.h"
 
 #ifdef __APPLE__
@@ -20,7 +20,7 @@
 
 
 void* Common::loadFile( const char * filename, bool appendNull ) {
-    
+
     FILE* f = fopen( filename, "rb" );
     if ( !f ) {
         return 0;

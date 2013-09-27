@@ -32,3 +32,5 @@ Debug
 project.xcworkspace/
 xcuserdata/
 DerivedData
+
+build/*

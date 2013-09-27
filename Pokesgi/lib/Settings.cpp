@@ -38,7 +38,7 @@ void Settings :: Read()
 	std :: ifstream in(filename.c_str());
 	if(!in.is_open())
 	{
-		std :: cerr << "error at reading" << std :: endl;
+		std :: cerr << "error at reading settings file" << std :: endl;
 		return;
 	}
 	std :: string line, param, value;

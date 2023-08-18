@@ -28,7 +28,7 @@ set(pokesgi_SOURCES
     #Lib
     lib/AnimatedSprite.cpp
     lib/Animation.cpp
-    lib/NLTmxMap.cpp
+    lib/NLTmx/NLTmxMap.cpp
     lib/ResourcePath.hpp
     lib/ResourcePathDefault.cpp
     lib/Settings.cpp
@@ -57,6 +57,9 @@ endif()
 
 # Install target
 install(TARGETS ${EXECUTABLE_NAME} DESTINATION bin)
+install(DIRECTORY lib/RapidXML DESTINATION include/RapidXML FILES_MATCHING PATTERN "*.hpp")
+install(DIRECTORY lib/NLTmx DESTINATION include/NLTmx FILES_MATCHING PATTERN "*.h")
+install(DIRECTORY lib/ DESTINATION include/pokesgi FILES_MATCHING PATTERN "*.hpp" PATTERN "*.h" PATTERN "*.mm")
 
 # CPack packaging
 include(InstallRequiredSystemLibraries)

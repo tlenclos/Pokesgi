@@ -7,8 +7,8 @@
 //
 
 #include <SFML/Graphics.hpp>
-#include "AnimatedSprite.h"
 #include "GameScene.h"
+#include "AnimatedSprite.h"
 #include "Hero.h"
 
 using namespace std;

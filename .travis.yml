@@ -1,18 +1,26 @@
 language: cpp
 compiler:
   - gcc
+  - clang
+
 before_script:
-  - sudo apt-get install libglew1.5 libglew1.5-dev libjpeg62 libjpeg62-dev -y
+  - sudo apt-get install libglew-dev libjpeg62 libjpeg62-dev x11proto-randr-dev libxrandr2  libx11-data libx11-xcb-dev libx11-xcb1 libx11-dev libxrender1 libxrender-dev libxi-dev x11proto-input-dev libxrandr-dev libudev1 libudev-dev libopenal-data libopenal1 libopenal-dev libvorbis-dev libvorbis0a libvorbisenc2 libvorbisfile3  libflac8 libflac-dev libflac++6 libflac++-dev -y
   - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
   - sudo apt-get update -qq
-  - if [ "$CXX" = "g++" ]; then sudo apt-get install -qq g++-4.8; fi
-  - if [ "$CXX" = "g++" ]; then export CXX="g++-4.8" CC="gcc-4.8"; fi
-  - wget http://www.sfml-dev.org/download/sfml/2.1/SFML-2.1-linux-gcc-64bits.tar.bz2
-  - tar -xvf SFML-2.1-linux-gcc-64bits.tar.bz2
-  - sudo cp -r SFML-2.1/* /usr/local/
+
+  - git clone --recursive --recurse-submodules git://github.com/SFML/SFML.git
+  - cmake SFML/CMakeLists.txt
+  - cd SFML && make && sudo make install && cd ..
+
+  - git clone --recursive --recurse-submodules git://github.com/Bromeon/Thor.git
+  - cmake Thor/CMakeLists.txt
+  - cd Thor && make && sudo make install && cd ..
+
   - cmake Pokesgi/CMakeLists.txt
+  - cd Pokesgi && make clean
 script:
   - make
+
 branches:
   only:
     - master

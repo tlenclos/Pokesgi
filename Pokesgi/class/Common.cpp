@@ -8,15 +8,14 @@
 #include <stdlib.h>
 #include "Common.h"
 
-#ifdef __APPLE__
-// Helper to get resource Path in OSX app
-#include "ResourcePath.hpp"
-#endif
-
 #ifdef _WIN32
 // Windows (x64 and x86)
 #include "ResourcePathDefault.h"
+#else
+// Helper to get resource Path in UNIX like systems
+#include "ResourcePath.hpp"
 #endif
+
 
 
 void* Common::loadFile( const char * filename, bool appendNull ) {
